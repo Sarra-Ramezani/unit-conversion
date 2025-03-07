@@ -2,8 +2,8 @@
 
 function getEntryObj() {
   const data = {
-    num: parseInt(document.querySelector("#entry-number").value),
-    unit: document.querySelector("#units-dropdown").value,
+    value: parseInt(document.querySelector("#entry-number").value),
+    to_unit: document.querySelector("#units-dropdown").value.toLowerCase(),
   };
 
   console.log(data);
@@ -22,7 +22,7 @@ function getEntryObj() {
     .catch((error) => {
       console.error("Error:", error);
     });
-  console.log(data.success);
+  console.log(data);
 }
 
 function showResult(result, unit) {
