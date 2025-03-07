@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Conversion</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="unit-conversion">
+      <label class="align-right" for="number">مقدار</label>
+      <input
+        type="text"
+        class="gray-border"
+        name=""
+        id="entry-number"
+        placeholder="فقط عدد"
+      />
+      <label class="align-right" for="units-dropdown">انتخاب واحد مقصد</label>
+      <select name="units" id="units-dropdown" class="gray-border">
+        <option value="" disabled selected>انتخاب کنید</option>
+        <option value="KG">کیلوگرم</option>
+        <option value="TON">تُن</option>
+      </select>
+      <button id="submit" onclick="getEntryObj()">تبدیل واحد</button>
+      <div id="result">
+        <input type="text" name="result" id="conversion-result" readonly />
+        <input type="text" name="target-unit" id="target-unit" readonly />
+        <label for="conversion-result"> خروجی</label>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
