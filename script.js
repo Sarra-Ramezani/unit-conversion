@@ -3,12 +3,13 @@ document.querySelector("#submit").addEventListener("click", getEntryObj);
 function getEntryObj() {
   const data = {
     value: parseInt(document.querySelector("#entry-number").value),
-    Kilograms: document.querySelector("#units-dropdown").value,
+    from_unit: document.querySelector("#from-units-dropdown").value,
+    to_unit: document.querySelector("#to-units-dropdown").value,
   };
 
   console.log(data);
-  const targetUnit = document.querySelector("#units-dropdown").value;
-  fetch("https://unit-converter.liara.run/convert-grams/", {
+  const targetUnit = document.querySelector("#to-units-dropdown").value;
+  fetch("https://main-unit-converter.liara.run/convert/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -26,10 +27,6 @@ function getEntryObj() {
 }
 
 function showResult(data, unit) {
-  if (unit === "kilograms") {
-    document.querySelector("#conversion-result").value = data.kilograms;
-  } else if (unit === "tons") {
-    document.querySelector("#conversion-result").value = data.tons;
-  }
+  document.querySelector("#conversion-result").value = data.result;
   document.querySelector("#target-unit").value = unit;
 }

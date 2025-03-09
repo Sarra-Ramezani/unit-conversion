@@ -16,11 +16,35 @@
         id="entry-number"
         placeholder="فقط عدد"
       />
-      <label class="align-right" for="units-dropdown">انتخاب واحد مقصد</label>
-      <select name="units" id="units-dropdown" class="gray-border">
+      <label class="align-right" for="from-units-dropdown"
+        >انتخاب واحد مبدأ</label
+      >
+      <select
+        name="units"
+        id="from-units-dropdown"
+        class="gray-border units-dropdown"
+      >
         <option value="" disabled selected>انتخاب کنید</option>
-        <option value="kilograms">کیلوگرم</option>
-        <option value="tons">تُن</option>
+        <option value="gr">گرم</option>
+        <option value="kg">کیلوگرم</option>
+        <option value="lb">پوند</option>
+        <option value="oz">اونس</option>
+        <option value="ton">تُن</option>
+      </select>
+      <label class="align-right" for="to-units-dropdown"
+        >انتخاب واحد مقصد</label
+      >
+      <select
+        name="units"
+        id="to-units-dropdown"
+        class="gray-border units-dropdown"
+      >
+        <option value="" disabled selected>انتخاب کنید</option>
+        <option value="gr">گرم</option>
+        <option value="kg">کیلوگرم</option>
+        <option value="lb">پوند</option>
+        <option value="oz">اونس</option>
+        <option value="ton">تُن</option>
       </select>
       <button id="submit">تبدیل واحد</button>
       <div id="result">
